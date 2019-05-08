@@ -8,6 +8,11 @@ let userSchema = new Schema(
             maxlength: 1024,
             required: [true, "Name of user is Required"]
         },
+        email:{
+            type:String,
+            required: [true, "Email is  Required"],
+            unique:true
+        },
         password: {
             type: String,
             minlength: 10,
@@ -29,7 +34,6 @@ let userSchema = new Schema(
         },
         phone:{
             type:Number,
-            unique:true,
             required:true
         }
     },
